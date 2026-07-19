@@ -1,0 +1,75 @@
+Backend: Vitis
+ClockPeriod: 5
+ClockUncertainty: 27%
+HLSConfig:
+  LayerName:
+    dense:
+      Precision:
+        bias: auto
+        result: auto
+        weight: auto
+      Trace: false
+    dense_1:
+      Precision:
+        bias: auto
+        result: auto
+        weight: auto
+      Trace: false
+    dense_1_linear:
+      Precision:
+        result: auto
+      Trace: false
+    dense_2:
+      Precision:
+        bias: auto
+        result: auto
+        weight: auto
+      Trace: false
+    dense_2_softmax:
+      Precision:
+        result: auto
+      Trace: false
+    dense_linear:
+      Precision:
+        result: auto
+      Trace: false
+    input_1:
+      Precision:
+        result: auto
+      Trace: false
+    re_lu:
+      Precision:
+        result: auto
+      Trace: false
+    re_lu_1:
+      Precision:
+        result: auto
+      Trace: false
+  Model:
+    BitExact: null
+    BramFactor: 1000000000
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Resource
+    TraceOutput: false
+IOType: io_parallel
+InputData: null
+InputShapes:
+  input_1:
+  - 10
+KerasModel: !keras_model 'hls4ml_prj/keras_model.keras'
+OutputDir: hls4ml_prj
+OutputPredictions: null
+OutputShapes:
+  layer9_out:
+  - 3
+Part: xc7z020clg484-1
+ProjectName: myproject
+Stamp: aa9f31b8
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  TBOutputStream: both
+  WriteEmulationConstants: false
+  WriteTar: false
+  WriteWeightsTxt: true

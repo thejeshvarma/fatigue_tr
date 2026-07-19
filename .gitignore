@@ -1,0 +1,32 @@
+# Ignore Vitis Workspace configuration and logs
+.vitisWorkspace.json
+_ide/
+/Fatigue/
+/fatigue_app/_ide/
+/fatigue_app/build/
+
+# Ignore Python virtual environment
+/hls_env/
+
+# Ignore HLS build outputs and temporary project folders
+/hls4ml_prj/myproject_prj/
+/hls4ml_prj/myproject_bridge.so
+/hls4ml_prj/tb_data/
+/hls4ml_prj/firmware/weights/*.h
+
+# Ignore diagnostic extraction folders
+/fatigue_xsa_extracted/
+/fatigue_xsa_extracted_new/
+/.rigel_lopper/
+/.Rigel/
+/scratch/
+
+# Ignore compiled C object and dependency files
+*.o
+*.d
+*.log
+*.bin
+*.elf
+*.size
+*.lock
+*.spec
